@@ -1,11 +1,21 @@
+const getColors = require('./tailwindcss/colors.js')
+const getFontSize = require('./tailwindcss/font-size.js')
+const getBoxShadow = require('./tailwindcss/box-shadow.js')
+
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false,
   theme: {
-    extend: {}
+    colors: getColors(),
+    fontSize: getFontSize(),
+    boxShadow: getBoxShadow()
   },
   variants: {
-    extend: {}
+    extend: {
+      backgroundColor: ['active'],
+      textColor: ['active'],
+      borderColor: ['active']
+    }
   },
   plugins: []
 }

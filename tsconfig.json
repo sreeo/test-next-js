@@ -17,9 +17,17 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["src/pages/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.js",
+    "tailwindcss/font-size.js",
+    "tailwindcss/colors.js",
+    "tailwindcss/box-shadow.js"
+  ],
   "exclude": ["node_modules"]
 }
